@@ -7,12 +7,23 @@
 body {
     height: 100vh;
     display: flex;
-    background-image: linear-gradient(to top left, #ffffff, #F70000);
+    flex-direction: column;
+    background: url("../../img/background.png") no-repeat center center fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .memory-game {
-    height: 640px;
-    width: 640px;
+    height: 600px;
+    width: 600px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +35,6 @@ body {
     width: calc(25% - 10px);
     margin: 5px;
     position: relative;
-    /*box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);*/
     cursor: pointer;
     transform: scale(1);
     transform-style: preserve-3d;

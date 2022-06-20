@@ -11,18 +11,19 @@
 
 <a href="https://github.com/SpruceGabriela/jogo-da-memoria-dio">Link para o GitHub</a>
 
-
+<img width="400" height="400" src="https://user-images.githubusercontent.com/28987245/174675485-6eac908d-20fe-4a6a-b167-f688c00c2944.png">
 
 ### Melhorias implementadas:
 
- - Aumento do numero de pares de cartas;
+ - Aumento do número de pares de cartas;
  - Logo e imagem de background temáticos;
  - Sistema de contagem de tentativas;
- - PopUp de resultados quando o jogo é finalizado;
+ - Apresentação de popup de resultados quando o jogo é finalizado;
  - Botão para reinício da partida;
- - Efeitos sonoros em determinadas ações.
+ - Efeitos sonoros para determinadas ações.
 
 ### Meu projeto:
 
 <a href="https://rldcarvalho.github.io/projeto-jogo-da-memoria/index.html">Link para jogar</a>
 
+<img width="600" height="650" src="https://user-images.githubusercontent.com/28987245/174675880-cb61b8c5-d895-4e0f-a5ea-82295e243a3a.gif">

@@ -5,20 +5,48 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background: url("../../img/background.png") no-repeat center center fixed;
+    background: url("../../img/background2.png") no-repeat center center fixed;
     justify-content: center;
     align-items: center;
 }
 
 .logo {
-    height: 100px;
+    height: 90px;
     width: auto;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+}
+
+.game-name {
+    font-size: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.start-button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #043988;
+    border-color: #07224b;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.start-button:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
 }
 
 .memory-game {
@@ -72,4 +100,26 @@ body {
 
 .card.flip {
     transform: rotateY(180deg);
+}
+
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -2,6 +2,16 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let hits = 0;
+let attempts = 0;
+
+/* Sons do Jogo */
+const openingTheme = new Audio();
+const cardCatch = new Audio();
+const cardClick = new Audio();
+openingTheme.src = './sound/pokemon-catch-theme.mp3';
+cardCatch.src = './sound/pokemon-lvlup.mp3';
+cardClick.src = './sound/pokemon-wall-bump.mp3';
 
 function flipCard() {
     if (lockBoard) return;
@@ -21,10 +31,15 @@ function flipCard() {
 
 function checkForMatch() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
+        cardCatch.play();
+        hits += 1;
+        attempts += 1;
         disableCards();
         return;
     }
 
+    attempts += 1;
+    cardClick.play();
     unflipCards();
 }
 
@@ -42,7 +57,7 @@ function unflipCards() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, 1000);
+    }, 1500);
 }
 
 function resetBoard() {

@@ -8,7 +8,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: url("../../img/background2.png") no-repeat center center fixed;
+    background: url("../../img/background.png") no-repeat center center fixed;
     justify-content: center;
     align-items: center;
 }

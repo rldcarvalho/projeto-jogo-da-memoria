@@ -86,11 +86,14 @@ cards.forEach((card) => {
     card.addEventListener('click', flipCard);
 })
 
+/* Verifica se foi clicado para fechar o popup*/
 popup.addEventListener('click', event => {
-    const classNameOfClickedElemente = event.target.classList[0];
-    if (classNameOfClickedElemente === 'popup-close' || classNameOfClickedElemente === 'popup-wrapper') {
+    const classNameOfClickedElement = event.target.classList[0];
+    const classNames = ['popup-close', 'popup-wrapper'];
+    const shouldClosePopup = classNames.some(className => className === classNameOfClickedElement);
+
+    if (shouldClosePopup) {
         popup.style.display = 'none'
     }
 
 })
-

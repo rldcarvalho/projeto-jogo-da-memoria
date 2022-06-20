@@ -1,4 +1,6 @@
 const cards = document.querySelectorAll('.card');
+const popup = document.querySelector('.popup-wrapper');
+const popupContent = document.querySelector('#winMessage');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
@@ -35,6 +37,11 @@ function checkForMatch() {
         hits += 1;
         attempts += 1;
         disableCards();
+        /* Dispara o popup caso acerte as 8 cartas*/
+        if (hits == 8) {
+            popup.style.display = 'block'
+            popupContent.innerHTML = `Parabéns, você finalizou o jogo com ${attempts} rodadas.`
+        }
         return;
     }
 
@@ -57,7 +64,7 @@ function unflipCards() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, 1500);
+    }, 1000);
 }
 
 function resetBoard() {
@@ -77,5 +84,13 @@ function resetBoard() {
 
 cards.forEach((card) => {
     card.addEventListener('click', flipCard);
+})
+
+popup.addEventListener('click', event => {
+    const classNameOfClickedElemente = event.target.classList[0];
+    if (classNameOfClickedElemente === 'popup-close' || classNameOfClickedElemente === 'popup-wrapper') {
+        popup.style.display = 'none'
+    }
+
 })
 

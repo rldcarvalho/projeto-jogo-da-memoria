@@ -123,3 +123,60 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* pop de jogo finalizado */
+
+.finish-button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #043988;
+    border-color: #07224b;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin: 10px 0 10px 0;
+}
+
+.finish-button:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.popup-wrapper {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.popup {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+
+}
+
+.popup-content h2,
+.popup-content p {
+    padding: 5px;
+}
